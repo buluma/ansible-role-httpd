@@ -11,6 +11,8 @@ on:
       - main
     tags-ignore:
       - '*'
+    paths-ignore:
+      - '.github/workflows/gitlab.yml'
   pull_request:
   schedule:
     - cron: '17 7 8 * *'
