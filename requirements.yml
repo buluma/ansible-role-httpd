@@ -5,7 +5,7 @@ roles:
   - name: buluma.epel
   - name: buluma.openssl
   - name: buluma.python_pip
-  - name: robertdebock.selinux
+  - name: buluma.selinux
 collections:
   - name: ansible.posix
   - name: community.crypto
