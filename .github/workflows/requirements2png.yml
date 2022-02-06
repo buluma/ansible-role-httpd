@@ -4,7 +4,13 @@
 #
 
 on:
-  - push
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '*'
+    paths-ignore:
+      - '.github/workflows/gitlab.yml'
 
 name: Ansible Graphviz
 
