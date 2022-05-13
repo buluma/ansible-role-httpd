@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Add to tracker [\#17](https://github.com/buluma/ansible-role-httpd/issues/17)
 - Cannot detect the required Python library cryptography \(\>= 1.2.3\) [\#15](https://github.com/buluma/ansible-role-httpd/issues/15)
 
 **Merged pull requests:**
