@@ -8,6 +8,10 @@
 
 - Cannot detect the required Python library cryptography \(\>= 1.2.3\) [\#15](https://github.com/buluma/ansible-role-httpd/issues/15)
 
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#18](https://github.com/buluma/ansible-role-httpd/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.0.7](https://github.com/buluma/ansible-role-httpd/tree/1.0.7) (2022-03-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.6...1.0.7)
