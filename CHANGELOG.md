@@ -31,13 +31,16 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.4...1.0.5)
 
+**Merged pull requests:**
+
+- set concurrency [\#13](https://github.com/buluma/ansible-role-httpd/pull/13) ([buluma](https://github.com/buluma))
+
 ## [1.0.4](https://github.com/buluma/ansible-role-httpd/tree/1.0.4) (2022-02-12)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.3...1.0.4)
 
 **Merged pull requests:**
 
-- set concurrency [\#13](https://github.com/buluma/ansible-role-httpd/pull/13) ([buluma](https://github.com/buluma))
 - Testing [\#11](https://github.com/buluma/ansible-role-httpd/pull/11) ([buluma](https://github.com/buluma))
 - Bump actions/checkout from 1 to 2.4.0 [\#9](https://github.com/buluma/ansible-role-httpd/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
 
