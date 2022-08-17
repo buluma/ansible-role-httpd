@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- Testing [\#22](https://github.com/buluma/ansible-role-httpd/pull/22) ([buluma](https://github.com/buluma))
 - Bump buluma/molecule-action from 4.0.6 to 4.0.7 [\#19](https://github.com/buluma/ansible-role-httpd/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#18](https://github.com/buluma/ansible-role-httpd/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
@@ -30,16 +31,13 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.4...1.0.5)
 
-**Merged pull requests:**
-
-- set concurrency [\#13](https://github.com/buluma/ansible-role-httpd/pull/13) ([buluma](https://github.com/buluma))
-
 ## [1.0.4](https://github.com/buluma/ansible-role-httpd/tree/1.0.4) (2022-02-12)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.3...1.0.4)
 
 **Merged pull requests:**
 
+- set concurrency [\#13](https://github.com/buluma/ansible-role-httpd/pull/13) ([buluma](https://github.com/buluma))
 - Testing [\#11](https://github.com/buluma/ansible-role-httpd/pull/11) ([buluma](https://github.com/buluma))
 - Bump actions/checkout from 1 to 2.4.0 [\#9](https://github.com/buluma/ansible-role-httpd/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
 
@@ -63,7 +61,6 @@
 **Merged pull requests:**
 
 - Testing [\#8](https://github.com/buluma/ansible-role-httpd/pull/8) ([buluma](https://github.com/buluma))
-- update selinux [\#3](https://github.com/buluma/ansible-role-httpd/pull/3) ([buluma](https://github.com/buluma))
 
 ## [1.0.1](https://github.com/buluma/ansible-role-httpd/tree/1.0.1) (2022-02-04)
 
@@ -80,6 +77,7 @@
 
 **Merged pull requests:**
 
+- update selinux [\#3](https://github.com/buluma/ansible-role-httpd/pull/3) ([buluma](https://github.com/buluma))
 - Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#2](https://github.com/buluma/ansible-role-httpd/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#1](https://github.com/buluma/ansible-role-httpd/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
 
