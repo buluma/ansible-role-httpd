@@ -18,5 +18,5 @@
   loop_control:
     label: "{{ item.name }}"
   notify:
-    - test httpd configuration validity
+    - Test httpd configuration validity
     - restart httpd
