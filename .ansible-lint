@@ -13,5 +13,5 @@ exclude_paths:
   - ./.github
   - ./requirements.yml
 
-warn_list:
+skip_list:
   - jinja

@@ -19,4 +19,4 @@
     label: "{{ item.name }}"
   notify:
     - Test httpd configuration validity
-    - restart httpd
+    - Restart httpd
