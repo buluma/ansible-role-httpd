@@ -14,4 +14,7 @@ exclude_paths:
   - ./requirements.yml
 
 skip_list:
-  - jinja
+  - yaml[truthy]
+
+enable_list:
+  - name[prefix]
