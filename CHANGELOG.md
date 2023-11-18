@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-httpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.9...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#27](https://github.com/buluma/ansible-role-httpd/issues/27)
+- Update action [\#26](https://github.com/buluma/ansible-role-httpd/issues/26)
+
 ## [1.0.9](https://github.com/buluma/ansible-role-httpd/tree/1.0.9) (2022-09-18)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.8...1.0.9)
