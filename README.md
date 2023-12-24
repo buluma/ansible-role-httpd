@@ -1,10 +1,10 @@
-# [Ansible role httpd](#httpd)
+# Ansible role [httpd](https://galaxy.ansible.com/ui/standalone/roles/buluma/httpd/documentation)
 
 Install and configure httpd on your system.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-httpd/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-httpd/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-httpd/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-httpd/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-httpd.svg)](https://github.com/buluma/ansible-role-httpd/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/httpd)](https://galaxy.ansible.com/ui/standalone/roles/buluma/httpd/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -189,9 +189,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
