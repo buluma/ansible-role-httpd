@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#30](https://github.com/buluma/ansible-role-httpd/issues/30)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#27](https://github.com/buluma/ansible-role-httpd/issues/27)
 - Update action [\#26](https://github.com/buluma/ansible-role-httpd/issues/26)
 
