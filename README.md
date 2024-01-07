@@ -130,8 +130,15 @@ httpd_remove_example: no
 
 httpd_additionnal_modules: []
 
+httpd_custom_modules_to_activate_with_command: []
+
 apache_global_vhost_settings: |
   DirectoryIndex index.php index.html
+
+# Template to uses for vhosts. Usefull to override the conf by your own setup.
+vhost_conf_template: vhost.conf.j2
+
+default_vhost_conf: default_vhost.conf
 ```
 
 ## [Requirements](#requirements)
@@ -165,7 +172,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8, 9|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
