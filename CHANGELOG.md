@@ -2,7 +2,16 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-httpd/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.9...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#32](https://github.com/buluma/ansible-role-httpd/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 3 to 4 [\#31](https://github.com/buluma/ansible-role-httpd/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1.1.0](https://github.com/buluma/ansible-role-httpd/tree/1.1.0) (2024-01-07)
+
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.0.9...1.1.0)
 
 **Closed issues:**
 
