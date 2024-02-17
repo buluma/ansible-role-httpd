@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-httpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#35](https://github.com/buluma/ansible-role-httpd/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.2.0](https://github.com/buluma/ansible-role-httpd/tree/1.2.0) (2024-01-20)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.1.0...1.2.0)
@@ -96,7 +104,6 @@
 **Merged pull requests:**
 
 - Update molecule.yml [\#5](https://github.com/buluma/ansible-role-httpd/pull/5) ([buluma](https://github.com/buluma))
-- Update README.md [\#4](https://github.com/buluma/ansible-role-httpd/pull/4) ([buluma](https://github.com/buluma))
 
 ## [1.0.0](https://github.com/buluma/ansible-role-httpd/tree/1.0.0) (2022-02-04)
 
@@ -104,6 +111,7 @@
 
 **Merged pull requests:**
 
+- Update README.md [\#4](https://github.com/buluma/ansible-role-httpd/pull/4) ([buluma](https://github.com/buluma))
 - update selinux [\#3](https://github.com/buluma/ansible-role-httpd/pull/3) ([buluma](https://github.com/buluma))
 - Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#2](https://github.com/buluma/ansible-role-httpd/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#1](https://github.com/buluma/ansible-role-httpd/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
