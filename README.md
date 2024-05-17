@@ -21,6 +21,11 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
     - ../../vars/main.yml
     - ../../defaults/main.yml
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
   roles:
     - role: buluma.httpd
       # https_ssl_enable: true
