@@ -107,7 +107,6 @@
 
 - Update molecule.yml [\#5](https://github.com/buluma/ansible-role-httpd/pull/5) ([buluma](https://github.com/buluma))
 - Update README.md [\#4](https://github.com/buluma/ansible-role-httpd/pull/4) ([buluma](https://github.com/buluma))
-- Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#2](https://github.com/buluma/ansible-role-httpd/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.0](https://github.com/buluma/ansible-role-httpd/tree/1.0.0) (2022-02-04)
 
@@ -116,6 +115,7 @@
 **Merged pull requests:**
 
 - update selinux [\#3](https://github.com/buluma/ansible-role-httpd/pull/3) ([buluma](https://github.com/buluma))
+- Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#2](https://github.com/buluma/ansible-role-httpd/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#1](https://github.com/buluma/ansible-role-httpd/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 
