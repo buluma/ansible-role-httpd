@@ -26,6 +26,8 @@ galaxy_info:
         - jammy
         - focal
         - bionic
+        - lunar
+        - noble
 
   galaxy_tags:
     - webserver
