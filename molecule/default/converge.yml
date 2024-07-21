@@ -39,6 +39,7 @@
         creates: /usr/lib/python3.12/EXTERNALLY-MANAGED.old
 
   roles:
+    - role: buluma.python_pip
     - role: ansible-role-httpd
       # https_ssl_enable: true
       httpd_port: 8080
