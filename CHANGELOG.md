@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-httpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#29](https://github.com/buluma/ansible-role-httpd/issues/29)
+- rebuild action [\#28](https://github.com/buluma/ansible-role-httpd/issues/28)
+
 ## [24.3.31](https://github.com/buluma/ansible-role-httpd/tree/24.3.31) (2024-03-30)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.2.0...24.3.31)
