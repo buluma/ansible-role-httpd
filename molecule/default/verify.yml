@@ -57,6 +57,9 @@
           AuthType Basic
           AuthName "Password Required"
           AuthUserFile "/password.file"
+        mode: '0644'
+        owner: root
+        group: root
 
     - name: See if authentication is required
       ansible.builtin.uri:
