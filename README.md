@@ -158,9 +158,7 @@ httpd_remove_example: false
 # Additionnal httpd module to install
 
 httpd_additionnal_modules: []
-
 httpd_custom_modules_to_activate_with_command: []
-
 apache_global_vhost_settings: |
   DirectoryIndex index.php index.html
 
