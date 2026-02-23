@@ -12,58 +12,58 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-  - name: Converge
-    hosts: all
-    become: true
-    gather_facts: true
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
 
-    vars_files:
-      - ../../vars/main.yml
-      - ../../defaults/main.yml
+  vars_files:
+  - ../../vars/main.yml
+  - ../../defaults/main.yml
 
-    pre_tasks:
-      - name: Update apt cache.
-        ansible.builtin.apt:
-          update_cache: true
-          cache_valid_time: 600
-        when: ansible_os_family == 'Debian'
-        changed_when: false
+  pre_tasks:
+  - name: Update apt cache.
+    ansible.builtin.apt:
+      update_cache: true
+      cache_valid_time: 600
+    when: ansible_os_family == 'Debian'
+    changed_when: false
 
-      - name: Check if python3.11 EXTERNALLY-MANAGED file exists
-        ansible.builtin.stat:
-          path: /usr/lib/python3.11/EXTERNALLY-MANAGED
-        register: externally_managed_file_py311
+  - name: Check if python3.11 EXTERNALLY-MANAGED file exists
+    ansible.builtin.stat:
+      path: /usr/lib/python3.11/EXTERNALLY-MANAGED
+    register: externally_managed_file_py311
 
-      - name: Rename python3.11 EXTERNALLY-MANAGED file if it exists
-        ansible.builtin.command:
-          cmd: mv /usr/lib/python3.11/EXTERNALLY-MANAGED 
-            /usr/lib/python3.11/EXTERNALLY-MANAGED.old
-        when: externally_managed_file_py311.stat.exists
-        args:
-          creates: /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+  - name: Rename python3.11 EXTERNALLY-MANAGED file if it exists
+    ansible.builtin.command:
+      cmd: mv /usr/lib/python3.11/EXTERNALLY-MANAGED 
+        /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+    when: externally_managed_file_py311.stat.exists
+    args:
+      creates: /usr/lib/python3.11/EXTERNALLY-MANAGED.old
 
-      - name: Check if python3.12 EXTERNALLY-MANAGED file exists
-        ansible.builtin.stat:
-          path: /usr/lib/python3.12/EXTERNALLY-MANAGED
-        register: externally_managed_file_py312
+  - name: Check if python3.12 EXTERNALLY-MANAGED file exists
+    ansible.builtin.stat:
+      path: /usr/lib/python3.12/EXTERNALLY-MANAGED
+    register: externally_managed_file_py312
 
-      - name: Rename python3.12 EXTERNALLY-MANAGED file if it exists
-        ansible.builtin.command:
-          cmd: mv /usr/lib/python3.12/EXTERNALLY-MANAGED 
-            /usr/lib/python3.12/EXTERNALLY-MANAGED.old
-        when: externally_managed_file_py312.stat.exists
-        args:
-          creates: /usr/lib/python3.12/EXTERNALLY-MANAGED.old
+  - name: Rename python3.12 EXTERNALLY-MANAGED file if it exists
+    ansible.builtin.command:
+      cmd: mv /usr/lib/python3.12/EXTERNALLY-MANAGED 
+        /usr/lib/python3.12/EXTERNALLY-MANAGED.old
+    when: externally_managed_file_py312.stat.exists
+    args:
+      creates: /usr/lib/python3.12/EXTERNALLY-MANAGED.old
 
-    roles:
-      - role: buluma.httpd
+  roles:
+  - role: buluma.httpd
       # https_ssl_enable: true
-        httpd_port: 8080
-        httpd_ssl_port: 8443
-        httpd_locations:
-          - name: my_location
-            location: /my_location
-            backend_url: "http://localhost:8080/myapplication"
+    httpd_port: 8080
+    httpd_ssl_port: 8443
+    httpd_locations:
+    - name: my_location
+      location: /my_location
+      backend_url: "http://localhost:8080/myapplication"
       # httpd_vhosts:
       #   - name: my_vhost_docroot
       #     servername: www1.example.com
@@ -97,32 +97,32 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
       #     servername: nodocroot.example.com
       #     documentroot: /var/www/html/nodocroot
       #     create_docroot: false
-        httpd_directories:
-          - name: my_directory
-            path: "{{ httpd_data_directory }}/my_directory"
+    httpd_directories:
+    - name: my_directory
+      path: "{{ httpd_data_directory }}/my_directory"
           # options:
           #   - Indexes
           #   - FollowSymLinks
-            allow_override: All
+      allow_override: All
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-httpd/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-  - name: Prepare
-    hosts: all
-    become: true
-    gather_facts: false
-    roles:
-      - role: buluma.bootstrap
-      - role: buluma.epel
-      - role: buluma.buildtools
-      - role: buluma.python_pip
-      - role: buluma.openssl
-        openssl_items:
-          - name: apache-httpd
-            common_name: "{{ ansible_fqdn }}"
+- name: Prepare
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+  - role: buluma.bootstrap
+  - role: buluma.epel
+  - role: buluma.buildtools
+  - role: buluma.python_pip
+  - role: buluma.openssl
+    openssl_items:
+    - name: apache-httpd
+      common_name: "{{ ansible_fqdn }}"
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
