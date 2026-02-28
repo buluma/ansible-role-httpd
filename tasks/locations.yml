@@ -1,5 +1,4 @@
 ---
-
 - name: locations | Enable modules
   community.general.apache2_module:
     name: "{{ item }}"
