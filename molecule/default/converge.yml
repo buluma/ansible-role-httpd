@@ -5,89 +5,91 @@
   gather_facts: true
 
   vars_files:
-  - ../../vars/main.yml
-  - ../../defaults/main.yml
+    - ../../vars/main.yml
+    - ../../defaults/main.yml
 
   pre_tasks:
-  - name: Update apt cache.
-    ansible.builtin.apt:
-      update_cache: true
-      cache_valid_time: 600
-    when: ansible_os_family == 'Debian'
-    changed_when: false
+    - name: Update apt cache.
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
 
-  - name: Check if python3.11 EXTERNALLY-MANAGED file exists
-    ansible.builtin.stat:
-      path: /usr/lib/python3.11/EXTERNALLY-MANAGED
-    register: externally_managed_file_py311
+    - name: Check if python3.11 EXTERNALLY-MANAGED file exists
+      ansible.builtin.stat:
+        path: /usr/lib/python3.11/EXTERNALLY-MANAGED
+      register: externally_managed_file_py311
 
-  - name: Rename python3.11 EXTERNALLY-MANAGED file if it exists
-    ansible.builtin.command:
-      cmd: mv /usr/lib/python3.11/EXTERNALLY-MANAGED
-        /usr/lib/python3.11/EXTERNALLY-MANAGED.old
-    when: externally_managed_file_py311.stat.exists
-    args:
-      creates: /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+    - name: Rename python3.11 EXTERNALLY-MANAGED file if it exists
+      ansible.builtin.command:
+        cmd: mv /usr/lib/python3.11/EXTERNALLY-MANAGED
+          /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+      when: externally_managed_file_py311.stat.exists
+      args:
+        creates: /usr/lib/python3.11/EXTERNALLY-MANAGED.old
 
-  - name: Check if python3.12 EXTERNALLY-MANAGED file exists
-    ansible.builtin.stat:
-      path: /usr/lib/python3.12/EXTERNALLY-MANAGED
-    register: externally_managed_file_py312
+    - name: Check if python3.12 EXTERNALLY-MANAGED file exists
+      ansible.builtin.stat:
+        path: /usr/lib/python3.12/EXTERNALLY-MANAGED
+      register: externally_managed_file_py312
 
-  - name: Rename python3.12 EXTERNALLY-MANAGED file if it exists
-    ansible.builtin.command:
-      cmd: mv /usr/lib/python3.12/EXTERNALLY-MANAGED
-        /usr/lib/python3.12/EXTERNALLY-MANAGED.old
-    when: externally_managed_file_py312.stat.exists
-    args:
-      creates: /usr/lib/python3.12/EXTERNALLY-MANAGED.old
+    - name: Rename python3.12 EXTERNALLY-MANAGED file if it exists
+      ansible.builtin.command:
+        cmd: mv /usr/lib/python3.12/EXTERNALLY-MANAGED
+          /usr/lib/python3.12/EXTERNALLY-MANAGED.old
+      when: externally_managed_file_py312.stat.exists
+      args:
+        creates: /usr/lib/python3.12/EXTERNALLY-MANAGED.old
 
   roles:
-  - role: buluma.httpd
-      # https_ssl_enable: true
-    httpd_port: 8080
-    httpd_ssl_port: 8443
-    httpd_locations:
-    - name: my_location
-      location: /my_location
-      backend_url: "http://localhost:8080/myapplication"
-      # httpd_vhosts:
-      #   - name: my_vhost_docroot
-      #     servername: www1.example.com
-      #     documentroot: "{{ httpd_data_directory }}/www1.example.com"
-      #   - name: my_vhost_backend_http
-      #     servername: www2.example.com
-      #     backend_url: "http://www.example.com/"
-      #     serveralias:
-      #       - example.com
-      #       - www.example.com
-      #   - name: my_vhost_remote
-      #     servername: www3.example.com
-      #     remote: "http://localhost:3128/"
-      #   - name: my_vhost_backend_https
-      #     servername: www4.example.com
-      #     backend_url: "https://www.example.com/"
-      #   - name: my_vhost_piratebay
-      #     servername: piratebay.nl
-      #     backend_url: "https://thepirate-bay.org/"
-      #     proxy_preserve_host: Off
-      #     proxy_requests: Off
-      #     setenv:
-      #       - name: force-proxy-request-1.0
-      #         value: 1
-      #       - name: proxy-nokeepalive
-      #         value: 1
-      #       - name: proxy-initial-not-pooled
-      #       - name: proxy-sendchunks
-      #         value: 1
-      #   - name: no_doc_root
-      #     servername: nodocroot.example.com
-      #     documentroot: /var/www/html/nodocroot
-      #     create_docroot: false
-    httpd_directories:
-    - name: my_directory
-      path: "{{ httpd_data_directory }}/my_directory"
-          # options:
-          #   - Indexes
-          #   - FollowSymLinks
-      allow_override: All
+    - role:
+        buluma.httpd
+        # https_ssl_enable: true
+      httpd_port: 8080
+      httpd_ssl_port: 8443
+      httpd_locations:
+        - name: my_location
+          location: /my_location
+          backend_url: "http://localhost:8080/myapplication"
+          # httpd_vhosts:
+          #   - name: my_vhost_docroot
+          #     servername: www1.example.com
+          #     documentroot: "{{ httpd_data_directory }}/www1.example.com"
+          #   - name: my_vhost_backend_http
+          #     servername: www2.example.com
+          #     backend_url: "http://www.example.com/"
+          #     serveralias:
+          #       - example.com
+          #       - www.example.com
+          #   - name: my_vhost_remote
+          #     servername: www3.example.com
+          #     remote: "http://localhost:3128/"
+          #   - name: my_vhost_backend_https
+          #     servername: www4.example.com
+          #     backend_url: "https://www.example.com/"
+          #   - name: my_vhost_piratebay
+          #     servername: piratebay.nl
+          #     backend_url: "https://thepirate-bay.org/"
+          #     proxy_preserve_host: Off
+          #     proxy_requests: Off
+          #     setenv:
+          #       - name: force-proxy-request-1.0
+          #         value: 1
+          #       - name: proxy-nokeepalive
+          #         value: 1
+          #       - name: proxy-initial-not-pooled
+          #       - name: proxy-sendchunks
+          #         value: 1
+          #   - name: no_doc_root
+          #     servername: nodocroot.example.com
+          #     documentroot: /var/www/html/nodocroot
+          #     create_docroot: false
+      httpd_directories:
+        - name: my_directory
+          path:
+            "{{ httpd_data_directory }}/my_directory"
+            # options:
+            #   - Indexes
+            #   - FollowSymLinks
+          allow_override: All
