@@ -9,6 +9,10 @@
 - Update action [\#29](https://github.com/buluma/ansible-role-httpd/issues/29)
 - rebuild action [\#28](https://github.com/buluma/ansible-role-httpd/issues/28)
 
+**Merged pull requests:**
+
+- Bump docker/login-action from 3.2.0 to 3.3.0 [\#40](https://github.com/buluma/ansible-role-httpd/pull/40) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-httpd/tree/24.3.31) (2024-03-30)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/1.2.0...24.3.31)
@@ -107,7 +111,6 @@
 **Merged pull requests:**
 
 - Testing [\#8](https://github.com/buluma/ansible-role-httpd/pull/8) ([buluma](https://github.com/buluma))
-- Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#1](https://github.com/buluma/ansible-role-httpd/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.1](https://github.com/buluma/ansible-role-httpd/tree/1.0.1) (2022-02-04)
 
@@ -126,6 +129,7 @@
 
 - update selinux [\#3](https://github.com/buluma/ansible-role-httpd/pull/3) ([buluma](https://github.com/buluma))
 - Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#2](https://github.com/buluma/ansible-role-httpd/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#1](https://github.com/buluma/ansible-role-httpd/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 
 
