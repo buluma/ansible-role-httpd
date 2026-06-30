@@ -102,6 +102,7 @@
 
 - Testing [\#11](https://github.com/buluma/ansible-role-httpd/pull/11) ([buluma](https://github.com/buluma))
 - Bump actions/checkout from 1 to 2.4.0 [\#9](https://github.com/buluma/ansible-role-httpd/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Testing [\#8](https://github.com/buluma/ansible-role-httpd/pull/8) ([buluma](https://github.com/buluma))
 
 ## [1.0.3](https://github.com/buluma/ansible-role-httpd/tree/1.0.3) (2022-02-10)
 
@@ -119,10 +120,6 @@
 
 - build ubuntu [\#7](https://github.com/buluma/ansible-role-httpd/issues/7)
 - build debian [\#6](https://github.com/buluma/ansible-role-httpd/issues/6)
-
-**Merged pull requests:**
-
-- Testing [\#8](https://github.com/buluma/ansible-role-httpd/pull/8) ([buluma](https://github.com/buluma))
 
 ## [1.0.1](https://github.com/buluma/ansible-role-httpd/tree/1.0.1) (2022-02-04)
 
