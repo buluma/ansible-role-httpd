@@ -26,7 +26,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
       ansible.builtin.apt:
         update_cache: true
         cache_valid_time: 600
-      when: ansible_os_family == 'Debian'
+      when: ansible_facts['os_family'] == 'Debian'
       changed_when: false
 
     - name: Check if python3.11 EXTERNALLY-MANAGED file exists
@@ -116,15 +116,19 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
   hosts: all
   become: true
   gather_facts: false
+
+  pre_tasks:
+    - name: Install sudo if missing
+      ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo}"
+      become: false
+      changed_when: false
+      failed_when: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.epel
     - role: buluma.buildtools
-    - role: buluma.python_pip
     - role: buluma.openssl
-      openssl_items:
-        - name: apache-httpd
-          common_name: "{{ ansible_fqdn }}"
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -138,7 +142,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # defaults file for httpd
 
 # The servername to use.
-httpd_servername: "{{ ansible_fqdn }}"
+httpd_servername: "{{ ansible_facts['fqdn'] }}"
 
 # The non-SSL port to use.
 httpd_port: 80
@@ -147,7 +151,7 @@ httpd_port: 80
 https_ssl_enable: false
 
 # To configure https, set the hostname to listen to.
-httpd_ssl_servername: "{{ ansible_fqdn }}"
+httpd_ssl_servername: "{{ ansible_facts['fqdn'] }}"
 
 # For SSL a TCP port is required.
 httpd_ssl_port: 443
@@ -201,14 +205,14 @@ Here is an overview of related roles:
 
 ## [Compatibility](#compatibility)
 
-This role has been tested on these [container images](https://hub.docker.com/u/robertdebock):
+This role has been tested on these [container images](https://hub.docker.com/u/buluma):
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|all|
-|[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
-|[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
-|[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
+|[EL](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Debian](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Fedora](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done on:
 
@@ -226,6 +230,3 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 
 [buluma](https://buluma.github.io/)
 
-### Get Help
-- Report issues: https://github.com/buluma/ansible-role-httpd/issues/new
-- See docs: https://docs.ansible.com/collection/gallery/ansible-role-httpd
