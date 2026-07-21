@@ -14,7 +14,7 @@
 
 - name: Ensure apache lock directory exists
   ansible.builtin.file:
-    path: /var/lock/apache2
+    path: /run/lock/apache2
     state: directory
     mode: "0755"
   when:
