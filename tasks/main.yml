@@ -13,9 +13,10 @@
     state: present
 
 - name: Ensure apache lock directory exists
-  ansible.builtin.command:
-    cmd: mkdir -p /var/lock/apache2
-    creates: /var/lock/apache2
+  ansible.builtin.file:
+    path: /var/lock/apache2
+    state: directory
+    mode: "0755"
   when:
     - ansible_facts['os_family'] == "Debian"
 
