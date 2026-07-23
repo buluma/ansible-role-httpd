@@ -38,10 +38,16 @@
           - 405
           - 404
 
+    - name: Ensure the packaging library is present for the pip module
+      ansible.builtin.package:
+        name: python3-packaging
+        state: present
+
     - name: Install passlib
       ansible.builtin.pip:
         name: passlib
         state: present
+        executable: "{{ ansible_facts['python']['executable'] }} -m pip"
 
     - name: Create htpasswd file
       community.general.htpasswd:
