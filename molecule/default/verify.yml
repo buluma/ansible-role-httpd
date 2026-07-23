@@ -47,7 +47,7 @@
       ansible.builtin.pip:
         name: passlib
         state: present
-        executable: "{{ ansible_facts['python']['executable'] }} -m pip"
+        break_system_packages: true
 
     - name: Create htpasswd file
       community.general.htpasswd:
