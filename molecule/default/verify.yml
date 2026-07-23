@@ -38,10 +38,19 @@
           - 405
           - 404
 
+    - name: Ensure pip is installed
+      ansible.builtin.package:
+        name: python3-pip
+        state: present
+
     - name: Ensure the packaging library is present for the pip module
       ansible.builtin.package:
         name: python3-packaging
         state: present
+
+    - name: Ensure pip is bootstrapped for ansible's own python interpreter
+      ansible.builtin.command: "{{ ansible_facts['python']['executable'] }} -m ensurepip --upgrade"
+      changed_when: true
 
     - name: Install passlib
       ansible.builtin.pip:
