@@ -39,8 +39,8 @@
           - 404
 
     - name: Install passlib
-      ansible.builtin.package:
-        name: python3-passlib
+      ansible.builtin.pip:
+        name: passlib
         state: present
 
     - name: Create htpasswd file
