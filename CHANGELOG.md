@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-httpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/26.7.2...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 7 to 7.6.0 [\#47](https://github.com/buluma/ansible-role-httpd/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [26.7.2](https://github.com/buluma/ansible-role-httpd/tree/26.7.2) (2026-07-23)
 
 [Full Changelog](https://github.com/buluma/ansible-role-httpd/compare/26.7.1...26.7.2)
