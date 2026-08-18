@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump ansible/ansible-lint from 26.6.0 to 26.8.0 [\#48](https://github.com/buluma/ansible-role-httpd/pull/48) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 7 to 7.6.0 [\#47](https://github.com/buluma/ansible-role-httpd/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [26.7.2](https://github.com/buluma/ansible-role-httpd/tree/26.7.2) (2026-07-23)
